@@ -1,0 +1,88 @@
+---
+interface Props {
+	rotation: string;
+}
+
+const {  rotation } = Astro.props;
+---
+
+<img class="image" alt="">
+
+<p class=`kayak rotated-${rotation}`></p>
+
+
+
+<style>
+	.kayak {
+		background-image: url("../images/tor2.png"); /* The image used */
+		background-color: ffff;
+		background-position: center; 
+		background-repeat: no-repeat; /* Do not repeat the image */
+	}	
+	.rotated-30{
+		transform: rotate(30deg);
+		width: 200px;
+		height: 100%; /* You must set a specified height */
+		background-size: 75px;
+	}
+	.rotated-90 {
+		transform: rotate(90deg);
+		height: 700px; /* You must set a specified height */
+		width: 100px;
+		background-size: 43px;
+		position: absolute;
+    	top: 0px;
+    	left: 756px;
+    	-webkit-animation:myfirst 10s infinite; /* Chrome, Safari, Opera */
+    	animation:myfirst 10s ;
+	}
+
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes myfirst
+    {
+    0%   { left:756px; top:0px;-webkit-transform:rotate(90deg)}
+    100% {left:200px; top:0px;-webkit-transform:rotate(0deg)}
+    }
+
+    /* Standard syntax */
+    @keyframes myfirst
+    {
+    0%   { left:0px; top:0px;transform:rotate(90deg)}
+    50%  {left:1500px; margin-left:-100px;transform:rotate(90deg)}
+    }
+
+
+
+	.rotated-180 {
+		transform: rotate(180deg);
+		height: 200px; /* You must set a specified height */	
+		width: 400px;
+	}
+
+
+	.image {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 43px;
+    height: 580px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 2s linear infinite;
+	background-image: url("../images/tor2.png"); /* The image used */
+	background-size: 54px;
+
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+</style>

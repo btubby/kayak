@@ -1,0 +1,60 @@
+---
+interface Props {
+	rotation: string;
+}
+
+const {  rotation } = Astro.props;
+---
+	<p class=`kayak rotated-${rotation}`></p>
+
+<style>
+	.kayak {
+		background-image: url("../images/tor2.png");
+		background-color: ffff;
+		background-position: center; 
+		background-repeat: no-repeat; /* Do not repeat the image */
+		height: 450px; /* You must set a specified height */
+		width: 190px;
+		background-size: 45px;
+		position: absolute;
+		left: -350px
+	}
+
+	.rotated-30{
+		transform: rotate(30deg);
+		width: 200px;
+		height: 100%; /* You must set a specified height */
+		background-size: 75px;
+	}
+	.rotated-90 {
+		transform: rotate(90deg);
+    	top: -150px;
+    	-webkit-animation:myfirst 10s ; /* Chrome, Safari, Opera */
+    	animation:myfirst 10s ;
+	}
+
+	.rotated-91 {
+		transform: rotate(90deg);
+    	top: 200px;
+    	-webkit-animation:myfirst 7s ; /* Chrome, Safari, Opera */
+    	animation:myfirst 7s ;
+	}
+	/* Chrome, Safari, Opera */
+	@-webkit-keyframes myfirst{
+		0%   { left:-380px; top:0px;transform:rotate(90deg)}
+    	100%  {left:2500px; transform:rotate(90deg)}
+    }
+
+    /* Standard syntax */
+    @keyframes myfirst {
+    	0%   { left:-380px; top:0px;transform:rotate(90deg)}
+    	100%  {left:2000px; transform:rotate(90deg)}
+    }
+
+	.rotated-180 {
+		transform: rotate(180deg);
+		height: 200px; /* You must set a specified height */	
+		width: 400px;
+	}
+
+</style>
