@@ -5,7 +5,7 @@ interface Props {
 
 const {  rotation } = Astro.props;
 ---
-	<p class=`kayak rotated-${rotation}`></p>
+<p class=`kayak rotated-${rotation}`></p>
 
 <style>
 	.kayak {
@@ -26,18 +26,20 @@ const {  rotation } = Astro.props;
 		height: 100%; /* You must set a specified height */
 		background-size: 75px;
 	}
-	.rotated-90 {
-		transform: rotate(90deg);
-    	top: -150px;
-    	-webkit-animation:myfirst 10s ; /* Chrome, Safari, Opera */
-    	animation:myfirst 10s ;
-	}
+	@media screen and (min-width: 1000px) {
+		.rotated-90 {
+			transform: rotate(90deg);
+			top: -150px;
+			-webkit-animation:myfirst 10s ; /* Chrome, Safari, Opera */
+			animation:myfirst 10s ;
+		}
 
-	.rotated-91 {
-		transform: rotate(90deg);
-    	top: 200px;
-    	-webkit-animation:myfirst 7s ; /* Chrome, Safari, Opera */
-    	animation:myfirst 7s ;
+		.rotated-91 {
+			transform: rotate(90deg);
+			top: 200px;
+			-webkit-animation:myfirst 7s ; /* Chrome, Safari, Opera */
+			animation:myfirst 7s ;
+		}
 	}
 	/* Chrome, Safari, Opera */
 	@-webkit-keyframes myfirst{

@@ -6,8 +6,6 @@ import Boat from '../components/Boat.astro'
 import BSCC from '../images/bscc.png';
 import BRITC from '../images/logo-bc.png';
 import SalesWants from '../images/salesAndWants.jpeg';
-
-
 ---
 
 <Layout title="Welcome to Astro mortal.">
@@ -17,92 +15,89 @@ import SalesWants from '../images/salesAndWants.jpeg';
 	<div class="container">
 
 		<item >
-			<p class="kayak-left">
-			</p>
+			<div class="kayak-left">
+			</div>
 		</item>
 		<item class="center-page"> 
-			<main>
-		
-		<h1>Accidental <span class="text-gradient">Kayaker</span></h1>
-		<!-- <p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		 -->
-		
-		<ul role="list" class="link-card-grid">
-			<Card
-			href="https://datawookie.dev/blog/2023/05/kayak-specifications/"
-			title="DataWookie"
-			body="Models, stabilities"
-			/>
-			<Card
-			href="https://stortfordcanoe.weebly.com/"
-			title="BSCC kayak club"
-			body=""
-			image={BSCC.src}
-			width="30%"
-			/>
-			<Card
-			href="https://entries.gbcanoemarathon.co.uk/entries"
-			title="Upcoming races"
-			body=""
-			image={BRITC.src}
-			width="20%"
-			/>
+				<h1>Accidental <span class="text-gradient">Kayaker</span></h1>
+				<!-- <p class="instructions">
+					To get started, open the directory <code>src/pages</code> in your project.<br />
+					<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+				</p>
+				-->
+				
+				<ul role="list" class="link-card-grid">
+					<Card
+					href="https://datawookie.dev/blog/2023/05/kayak-specifications/"
+					title="DataWookie"
+					body="Models, stabilities"
+					/>
+					<Card
+					href="https://stortfordcanoe.weebly.com/"
+					title="BSCC kayak club"
+					body=""
+					image={BSCC.src}
+					width="30%"
+					/>
+					<Card
+					href="https://entries.gbcanoemarathon.co.uk/entries"
+					title="Upcoming races"
+					body=""
+					image={BRITC.src}
+					width="20%"
+					/>
 
-			<Card
-			href="https://www.facebook.com/groups/175548469594046"
-			title="'Sales and Wants' on Facebook"
-			body=""
-			image={SalesWants.src}
-			width="30%"
-			/>
-			<Card
-			href="https://www.nswatersports.co.uk/blog/2019/11/06/how-to-choose-the-right-kayak-paddles/"
-			title="Paddles"
-			body="Explained"
-			/>
-			<Card
-			href="https://astro.build/chat/"
-			title="The Shed"
-			body="Tercel"
-			/>
-			<Card
-			href="https://astro.build/chat/"
-			title="The Shed"
-			body="Hobby"
-			/>
-			<Card
-			href="https://astro.build/chat/"
-			title="The Shed"
-			body="Tor"
-			/>
-			<Card
-			href="https://astro.build/chat/"
-			title="The Shed"
-			body="Epsilon"
-			/>
-			<Card
-			href="https://astro.build/chat/"
-			title="The Shed"
-			body="Eta"
-			/>
-			<Card
-			href="https://astro.build/chat/"
-			title="The Shed"
-			body="Zeta"
-			/>
-		</ul>
-		<div>
-			By <a href="https://tubby-24c3e.firebaseapp.com/#contact">Ben Tubby</a>
-		</div>
-	</main>
-	</item>
-	<item >
-		<p class="kayak-right">
-		</p>
-	</item>
+					<Card
+					href="https://www.facebook.com/groups/175548469594046"
+					title="'Sales and Wants' on Facebook"
+					body=""
+					image={SalesWants.src}
+					width="30%"
+					/>
+					<Card
+					href="https://www.nswatersports.co.uk/blog/2019/11/06/how-to-choose-the-right-kayak-paddles/"
+					title="Paddles"
+					body="Explained"
+					/>
+					<Card
+					href="https://astro.build/chat/"
+					title="The Shed"
+					body="Tercel"
+					/>
+					<Card
+					href="https://astro.build/chat/"
+					title="The Shed"
+					body="Hobby"
+					/>
+					<Card
+					href="https://astro.build/chat/"
+					title="The Shed"
+					body="Tor"
+					/>
+					<Card
+					href="https://astro.build/chat/"
+					title="The Shed"
+					body="Epsilon"
+					/>
+					<Card
+					href="https://astro.build/chat/"
+					title="The Shed"
+					body="Eta"
+					/>
+					<Card
+					href="https://astro.build/chat/"
+					title="The Shed"
+					body="Zeta"
+					/>
+				</ul>
+				<div>
+					By <a href="https://tubby-24c3e.firebaseapp.com/#contact">Ben Tubby</a>
+				</div>
+		</item>
+		<item >
+			<div class="kayak-right">
+			</div>
+		</item>
 </div>
 </Layout>
 
@@ -169,7 +164,7 @@ import SalesWants from '../images/salesAndWants.jpeg';
 		height: 100%; /* You must set a specified height */
 		/* background-position: center; Center the image */
 		background-repeat: no-repeat; /* Do not repeat the image */
-		width: 134px;
+		width: 166px;
 	}
 	.kayak-right {
 		background-image: url("../images/tercel.png"); /* The image used */
@@ -185,7 +180,9 @@ import SalesWants from '../images/salesAndWants.jpeg';
 	}
 	.center-page {
 		text-align: center;
-		width: 80%;
+		width: 8100;
 	}
-
+	.item {
+  		flex-shrink: 3; /* default 1 */
+	}		
 </style>
